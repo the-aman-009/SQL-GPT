@@ -1,0 +1,107 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+}
+
+.container {
+  width: 90%;
+  max-width: 900px;
+  margin: 20px auto;
+  background: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1, h2 {
+  margin-top: 0;
+  text-align: center;
+}
+
+section {
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  background: #fafafa;
+}
+
+input[type="file"],
+input[type="text"],
+textarea {
+  margin: 5px 0;
+  padding: 8px;
+  width: 70%;
+  box-sizing: border-box;
+}
+
+textarea {
+  width: 80%;
+}
+
+button {
+  padding: 8px 15px;
+  background: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #555;
+}
+
+.message {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.message.error {
+  color: #d8000c;
+}
+
+.message.success {
+  color: #4caf50;
+}
+
+.columns-list {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 10px;
+  min-height: 40px;
+  font-style: italic;
+}
+
+#results table,
+#rawSqlResults table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+#results th, #results td,
+#rawSqlResults th, #rawSqlResults td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+}
+
+#results th,
+#rawSqlResults th {
+  background: #eee;
+}
+
+#suggestionsList ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+.suggestion-item {
+  cursor: pointer;
+  color: #007bff;
+  margin-bottom: 5px;
+}
+
+.suggestion-item:hover {
+  text-decoration: underline;
+}

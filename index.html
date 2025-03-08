@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Enhanced English-to-SQL Converter</title>
+  <!-- Chart.js for aggregator queries -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+  <h1>Enhanced English-to-SQL Converter</h1>
+
+  <!-- 1. File Upload -->
+  <section class="upload-section">
+    <h2>1. Upload Your File</h2>
+    <p>Supported formats: CSV or XLSX</p>
+    <input type="file" id="fileInput" accept=".csv, .xlsx">
+    <button id="uploadBtn">Upload</button>
+    <div id="uploadMessage" class="message"></div>
+  </section>
+
+  <!-- 2. Columns Display -->
+  <section class="columns-section">
+    <h2>Uploaded Columns</h2>
+    <div id="columnsList" class="columns-list">No columns yet.</div>
+  </section>
+
+  <!-- 3. Auto-Generated Suggestions -->
+  <section class="suggestions-section">
+    <h2>Auto-Generated Queries</h2>
+    <div id="suggestionsList"></div>
+  </section>
+
+  <!-- 4. Query Input -->
+  <section class="query-section">
+    <h2>2. Ask Your Query</h2>
+    <p>Examples: "Show all data", "Show City in London", "Total Sales by Region", "Count City by Sales"</p>
+    <input type="text" id="queryInput" placeholder="Enter your English query...">
+    <button id="queryBtn">Submit Query</button>
+    <div id="queryMessage" class="message"></div>
+  </section>
+
+  <!-- 5. Results -->
+  <section class="results-section">
+    <h2>Results</h2>
+    <div id="results"></div>
+    <canvas id="chartCanvas" width="400" height="200" style="display:none;"></canvas>
+  </section>
+
+  <!-- 6. SQL Playground -->
+  <section class="sql-playground-section">
+    <h2>3. SQL Playground</h2>
+    <p>Type raw SQL (e.g. <code>SELECT * FROM table_xyz</code>) to test advanced queries.</p>
+    <textarea id="rawSqlInput" rows="3" placeholder="SELECT * FROM table_xyz WHERE &quot;Job Title&quot; = 'Developer';"></textarea>
+    <button id="rawSqlBtn">Run SQL</button>
+    <div id="rawSqlMessage" class="message"></div>
+    <div id="rawSqlResults"></div>
+  </section>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
